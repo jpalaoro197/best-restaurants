@@ -5692,11 +5692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/WinnieWang/Downloads/BestRestaurants.Solution/BestRestaurants/BestRestaurants.csproj",
+      "projectUniqueName": "/Users/WinnieWang/Desktop/E/BestRestaurants.Solution/BestRestaurants/BestRestaurants.csproj",
       "projectName": "BestRestaurants",
-      "projectPath": "/Users/WinnieWang/Downloads/BestRestaurants.Solution/BestRestaurants/BestRestaurants.csproj",
+      "projectPath": "/Users/WinnieWang/Desktop/E/BestRestaurants.Solution/BestRestaurants/BestRestaurants.csproj",
       "packagesPath": "/Users/WinnieWang/.nuget/packages/",
-      "outputPath": "/Users/WinnieWang/Downloads/BestRestaurants.Solution/BestRestaurants/obj/",
+      "outputPath": "/Users/WinnieWang/Desktop/E/BestRestaurants.Solution/BestRestaurants/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/WinnieWang/.nuget/NuGet/NuGet.Config"
