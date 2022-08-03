@@ -8,7 +8,7 @@ namespace BestRestaurants.Models
     public int RestaurantId { get; set; }
     public string Name { get; set; }
     [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString = "{0:MM/dd/yyyy}")]
-    public DateTime DateOpened { get; set; }
+    public DateTime Date { get; set; }
     public virtual ICollection<CuisineRestaurant> JoinEntities { get;}
 
   }
