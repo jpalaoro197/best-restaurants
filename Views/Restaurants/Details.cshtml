@@ -2,11 +2,39 @@
   Layout = "_Layout";
 }
 
-@model BestRestaurants.Models.Restaurant
+@model BestRestaurants.Models.Restaurants
 
-<h2>Restaurant Details</h2>
+<h2>Restaurants Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>This restaurants does not belong to any categories</p>
+}
+else
+{
+  <h4>Cuisines the restaurants belongs to:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Cuisine.Class</li>
+  }
+  </ul>
+  <h3>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)</h3>
+}
+ <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+
+    @using (Html.BeginForm("DeleteCuisine", "Restaurantss"))
+    {
+      @Html.Hidden("joinId", @join.CuisineRestaurantsId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+  </ul>
+
 <p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
-<p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
+<p>@Html.ActionLink("Edit Restaurants", "Edit", new { id = Model.RestaurantsId })</p>
+<p>@Html.ActionLink("Delete Restaurants", "Delete", new { id = Model.RestaurantsId })</p>
