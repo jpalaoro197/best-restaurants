@@ -1,17 +1,18 @@
-
 using System.Collections.Generic;
 
-namespace BestRestaurants.Models
+namespace UniversityRoster.Models
 {
   public class Cuisine
-  {
-    public Cuisine()
     {
-      this.Restaurants = new HashSet<Restaurant>();
-    }
+        public Cuisine()
+        {
+            this.JoinEntities = new HashSet<CuisineRestaurant>();
+        }
 
-    public int CuisineId { get; set; }
-    public string Description { get; set; }
-    public virtual ICollection<Restaurant> Restaurants { get; set; }
-  }
+        public int CuisineId { get; set; }
+        public string Description { get; set; }
+        
+        public virtual ICollection<CuisineRestaurant> JoinEntities { get; set; }
+
+    }
 }
