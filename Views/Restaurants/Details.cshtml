@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-@model BestRestaurants.Models.Restaurants
+@model BestRestaurants.Models.Restaurant
 
 <h2>Restaurants Details</h2>
 <hr />
@@ -18,7 +18,7 @@ else
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Cuisine.Class</li>
+    <li>@join.Cuisine.Details</li>
   }
   </ul>
   <h3>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)</h3>
@@ -27,14 +27,14 @@ else
   @foreach(var join in Model.JoinEntities)
   {
 
-    @using (Html.BeginForm("DeleteCuisine", "Restaurantss"))
+    @using (Html.BeginForm("DeleteCuisine", "Restaurants"))
     {
-      @Html.Hidden("joinId", @join.CuisineRestaurantsId)
+      @Html.Hidden("joinId", @join.CuisineRestaurantId)
       <input type="submit" value="Delete"/>
     }
   }
   </ul>
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Restaurants", "Edit", new { id = Model.RestaurantsId })</p>
-<p>@Html.ActionLink("Delete Restaurants", "Delete", new { id = Model.RestaurantsId })</p>
+<p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
