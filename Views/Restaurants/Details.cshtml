@@ -18,7 +18,7 @@ else
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Cuisine.Details</li>
+    <li>@join.Cuisine.Description</li>
   }
   </ul>
   <h3>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)</h3>
